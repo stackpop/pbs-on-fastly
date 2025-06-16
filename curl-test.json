@@ -1,0 +1,28 @@
+curl -v -X POST "https://legally-actual-wren.edgecompute.app/openrtb2/auction" \
+  -H "Content-Type: application/json" \
+  -H "Origin: https://auburndao.com" \
+  -H "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:137.0) Gecko/20100101 Firefox/137.0" \
+  -d '{
+    "id": "24242424",
+    "imp": [{
+      "id": "imp1",
+      "banner": { "format": [{ "w": 728, "h": 90 }] },
+      "bidfloor": 0.01,
+      "bidfloorcur": "USD",
+      "ext": { "prebid":
+            { "bidder": { "smartadserver":
+            { "siteId": 686105,
+              "networkId": 5280,
+              "pageId": 2040327,
+              "formatId": 141225,
+              "target": "testing=prebid",
+              "domain": "auburndao.com"
+              } } } }
+    }],
+    "site": { "page": "https://auburndao.com" },
+    "user": { "id": "5280" },
+    "test": 1,
+    "debug": 1,
+    "tmax": 1000,
+    "at": 1
+  }'

@@ -1,0 +1,45 @@
+adapters:
+  smartadserver:
+    enabled: true
+    endpoint: "https://ssb-global.smartadserver.com/api/bid?callerId=5"
+    platform-id: 5280
+    modifying_vast_xml_allowed: true
+    default-config:
+      site-id: 686105
+      page-id: 2040327
+      format-id: 141225
+      platform-id: 5280
+
+gdpr:
+  enabled: false
+  default_value: 0
+  tcf2:
+    enabled: false
+
+settings:
+  enforce_valid_account: false
+  generate_bid_id: true
+
+log:
+  level: "debug"
+
+request_logging:
+  enabled: true
+  http_request:
+    enabled: true
+    include_headers: true
+  http_response:
+    enabled: true
+    include_headers: true
+
+http_client:
+  debug: true
+
+metrics:
+  logs:
+    enabled: true
+
+account_required: false
+request_validation:
+  ipv4_private_networks_masked: false
+  ipv6_private_networks_masked: false 
